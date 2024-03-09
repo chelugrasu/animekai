@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animekai Temporar</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="appBackground">
+        <div class="landing" id="landingPage">
+            <p class="landingTitle">Mentenanță</p>
+            <p class="landingDescription">
+                Dragi utilizatori AnimeKai
+                <br>
+                Vrem să vă informăm că site-ul nostru va fi oprit pentru o perioadă de timp nedeterminată
+                <br>
+                <br>
+                În legătură cu anime-urile săptămânale, pe acestea le veți putea viziona aici în fiecare zi de lansare!
+                Noutățile și anunțurile oficiale le veți găsii pe <span style="color: #f6b700; cursor: pointer; text-shadow: 0 0 15px #f6b700;" onclick="window.location.href='https://discord.gg/HaYzTJ3t4D';">serverul nostru de discord</span> care îl veți de asemena găsii în butonul de mai jos.
+                <br>
+                <br>
+                Cu respect,
+                <br>
+                Echipa Animekai 💛
+            </p>
+            <div class="button" style="left: 1050px;" onclick="window.location.href='https://discord.gg/HaYzTJ3t4D';">
+                <p>Server de Discord</p>
+            </div>
+            <div class="button" style="left: 1325px;" onclick="changePage('episodesPage')">
+                <p>Episoade săptămânale</p>
+            </div>
+            <div class="landingImage"></div>
+        </div>
+
+        <div class="animePage" id="episodesPage">
+            <div class="episodesPageImage"></div>
+            <p class="episodesPageTitle">Episoade săptămânale</p>
+            <div class="episodesContainer" id="episodesContainer">
+            </div>
+            <div class="returnButton" onclick="changePage('landingPage')">
+                <i class="arrow left"></i>
+            </div>
+        </div>
+
+        <div class="watchPage" id="watchPage">
+            <div class="playerContainer">
+                <iframe 
+                  class="player" 
+                  src="" 
+                  loading="lazy" 
+                  width="100%" 
+                  height="100%" 
+                  frameborder="0"
+                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                  allowfullscreen="true"
+                ></iframe>
+              </div>
+              <p class="watchSeriesTitle"></p>
+              <div class="watchButton" id="homeButton" style="left: 20px;" onclick="changePage('landingPage')">
+                <p>Acasă</p>
+              </div>
+              <div class="watchButton" id="episodesButton" style="left: 230px;" onclick="changePage('episodesPage')">
+                <p>Episoade săptămânale</p>
+              </div>
+        </div>
+</body>
+</html>
